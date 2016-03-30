@@ -54,8 +54,7 @@ class PreviewImagesController: UIViewController,UICollectionViewDelegate,UIColle
         previewCollectionView.backgroundColor = UIColor.clearColor()
         previewCollectionView.pagingEnabled = true
         
-        previewArr = ["Tower" , "London_Tower_Bridge_Sunset_Cityscape_Panorama"]
-        
+        previewArr = ["bat.jpg" , "civil.jpg" , "ironman"]
         //        previewArr  = ["http://groups-tap.s3.amazonaws.com/14586455588900.jpg" , "http://groups-tap.s3.amazonaws.com/14586477414997.jpg"]
         view.insertSubview(previewCollectionView, atIndex: 0)
         
@@ -122,13 +121,19 @@ class PreviewImagesController: UIViewController,UICollectionViewDelegate,UIColle
         if let cell:DemoCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(kCellIdentifierGallery, forIndexPath: indexPath) as? DemoCollectionViewCell{
             
             
-            if(indexPath.row % 2 == 0){
-                //                 cell.configureForURL(previewArr[0] as! String)
-                cell.photo = UIImage(named: previewArr[0] as! String)
+            if(indexPath.row == 0){
+              cell.photo = UIImage(named: previewArr[0] as! String)
             }else{
-                //                 cell.configureForURL(previewArr[1] as! String)
-                cell.photo = UIImage(named: previewArr[1] as! String)
+                if(indexPath.row % 2 == 0){
+                    //                 cell.configureForURL(previewArr[0] as! String)
+                    cell.photo = UIImage(named: previewArr[1] as! String)
+                }else{
+                    //                 cell.configureForURL(previewArr[1] as! String)
+                    cell.photo = UIImage(named: previewArr[2] as! String)
+                }
             }
+            
+
             
             cell.configureCell()
             

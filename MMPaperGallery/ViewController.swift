@@ -22,7 +22,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        previewArr = ["Tower" , "London_Tower_Bridge_Sunset_Cityscape_Panorama"]
+        previewArr = ["bat.jpg" , "civil.jpg" , "ironman"]
         tableView.registerNib(UINib(nibName: "ImageTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "cell")
         tableView.backgroundColor = UIColor.clearColor()
         setupHeader()
@@ -33,19 +33,19 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         
         let header = UIView(frame: CGRectMake(0,0,CGRectGetWidth(view.frame),250))
         let square = UIView(frame: CGRectMake(30 ,20 , 100 , 100))
-        square.backgroundColor = UIColor(red: 241/255, green: 241/255, blue: 241/255, alpha: 1)
+        square.backgroundColor = UIColor.lightGrayColor()//UIColor(red: 241/255, green: 241/255, blue: 241/255, alpha: 1)
         
         let line1 = UIView(frame: CGRectMake(30 ,140 , CGRectGetWidth(view.frame)-60 , 8))
-        line1.backgroundColor = UIColor(red: 241/255, green: 241/255, blue: 241/255, alpha: 1)
+        line1.backgroundColor = UIColor.lightGrayColor()//UIColor(red: 241/255, green: 241/255, blue: 241/255, alpha: 1)
         
         let line2 = UIView(frame: CGRectMake(30 ,170 , CGRectGetWidth(view.frame)-60 , 8))
-        line2.backgroundColor = UIColor(red: 241/255, green: 241/255, blue: 241/255, alpha: 1)
+        line2.backgroundColor = UIColor.lightGrayColor()//UIColor(red: 241/255, green: 241/255, blue: 241/255, alpha: 1)
         
         let line3 = UIView(frame: CGRectMake(30 ,200 , CGRectGetWidth(view.frame)-60 , 8))
-        line3.backgroundColor = UIColor(red: 241/255, green: 241/255, blue: 241/255, alpha: 1)
+        line3.backgroundColor = UIColor.lightGrayColor()//UIColor(red: 241/255, green: 241/255, blue: 241/255, alpha: 1)
         
         let line4 = UIView(frame: CGRectMake(30 ,230 , CGRectGetWidth(view.frame)-60 , 8))
-        line4.backgroundColor =  UIColor(red: 241/255, green: 241/255, blue: 241/255, alpha: 1)
+        line4.backgroundColor =  UIColor.lightGrayColor()//  UIColor(red: 241/255, green: 241/255, blue: 241/255, alpha: 1)
         
         header.addSubview(square)
         header.addSubview(line1)
@@ -82,12 +82,16 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         if let cell:ImageTableViewCell = tableView.dequeueReusableCellWithIdentifier("cell") as? ImageTableViewCell{
             cell.backgroundColor = UIColor.clearColor()
             cell.selectionStyle = .None
-            if(indexPath.row % 2 == 0){
-                //                 cell.configureForURL(previewArr[0] as! String)
+            if(indexPath.row == 0){
                 cell.photoView.image = UIImage(named: previewArr[0] as! String)
             }else{
-                //                 cell.configureForURL(previewArr[1] as! String)
-                cell.photoView.image = UIImage(named: previewArr[1] as! String)
+                if(indexPath.row % 2 == 0){
+                    //                 cell.configureForURL(previewArr[0] as! String)
+                    cell.photoView.image = UIImage(named: previewArr[1] as! String)
+                }else{
+                    //                 cell.configureForURL(previewArr[1] as! String)
+                    cell.photoView.image = UIImage(named: previewArr[2] as! String)
+                }
             }
             
 
