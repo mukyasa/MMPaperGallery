@@ -7,9 +7,18 @@ Image Browser similar to Facebook Paper app
 ![MMPaperGallery](https://github.com/mukyasa/MMPaperGallery/blob/master/MMPaperGallery/paper.gif)<br />
 
 **Credits**<br />
-[vitoziv](https://github.com/vitoziv) For ImageView Content Mode Animation [Here](https://github.com/vitoziv/VICMAImageView)<br />
+[@vitoziv](https://github.com/vitoziv) For ImageView Content Mode Animation [Here](https://github.com/vitoziv/VICMAImageView)<br />
+
+[@sweetmandm](https://github.com/sweetmandm) Ionicons [Here](https://github.com/sweetmandm/ionicons-iOS)<br />
 
 
+##Features
+- Also supports web url images `cell.configureForURL(url)`
+- Pinch Zoom 
+- Photo Tilt Feature similar to Paper app
+- Copy the Paper Gallery folder from the project and check the demo.
+
+ 
 **My Other Repositories**
 
 **MMPaper:**<br />
