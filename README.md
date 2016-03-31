@@ -2,9 +2,7 @@
 Image Browser similar to Facebook Paper app
 
 ##Demo
-![MMPaperGallery](http://a1.mzstatic.com/us/r30/Purple5/v4/67/4c/41/674c4115-8821-9f9d-fa68-24d2f8701408/screen322x572.jpeg)<br />
-
-![MMPaperGallery](https://github.com/mukyasa/MMPaperGallery/blob/master/MMPaperGallery/paper.gif)<br />
+![MMPaperGallery](http://a1.mzstatic.com/us/r30/Purple5/v4/67/4c/41/674c4115-8821-9f9d-fa68-24d2f8701408/screen322x572.jpeg)             ![MMPaperGallery](https://github.com/mukyasa/MMPaperGallery/blob/master/MMPaperGallery/paper.gif)<br />
 
 **Credits**<br />
 [@vitoziv](https://github.com/vitoziv) For ImageView Content Mode Animation [Here](https://github.com/vitoziv/VICMAImageView)<br />
